@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen p-4 justify-center">
       <div className="flex flex-col gap-10 w-full items-center justify-start max-w-xl">
-        <Image src={'/logo.png'} alt="logo" width={100} height={24} />
+        <Image src={'/Logo.png'} alt="logo" width={100} height={24} />
         <SearchMedicine />
       </div>
     </main>
