@@ -7,7 +7,7 @@ export default function CardList() {
     const [drugsResult] = useAtom(drugsResultAtom)
 
     return <>
-        <p className="text-xl mt-4">{drugsResult.length !== 0 && `showing ${drugsResult.length} results`}</p>
+        <p className="text-xl mt-4">{drugsResult.length !== 0 ? `showing ${drugsResult.length} results` : `not results found`}</p>
         {drugsResult.map((drug) => {
             return <Card key={drug.id} title={drug.name} subtitle={<ul className="flex flex-wrap gap-2">{
                 drug.diseases.map((disease) => <Pill key={disease}>{disease}</Pill>)
