@@ -6,12 +6,8 @@ export default function Home() {
     <main className="flex min-h-screen p-4">
       <div className="flex flex-col gap-10 w-full items-center justify-start">
         <Image src={'/logo.png'} alt="logo" width={100} height={24} />
-
-        <div className="flex flex-col gap-4">
-          <SearchMedicine />
-        </div>
+        <SearchMedicine />
       </div>
-
     </main>
   )
 }

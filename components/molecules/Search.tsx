@@ -1,11 +1,13 @@
+import { useAtom } from "jotai";
 import Input from "@/components/atoms/Input";
-import { useState } from "react";
+import { drugsSearchTextAtom } from "@/store/drugs";
 
 export default function Search() {
-    const [text, setText] = useState<string>('')
+    const [drugsSearchText, setDrugsSearchText] = useAtom(drugsSearchTextAtom)
 
     return <>
-        <h2>Search {text} </h2>
-        <Input placeholder="Search by name or disease" type="text" name="search" value={text} onChange={(value) => setText(value)} />
+        <h2>Search</h2>
+        <Input placeholder="Search by name or disease" type="text" name="search"
+            value={drugsSearchText} onChange={(value) => setDrugsSearchText(value)} />
     </>
 }
